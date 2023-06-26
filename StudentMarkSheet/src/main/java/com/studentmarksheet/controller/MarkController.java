@@ -19,7 +19,7 @@ public class MarkController {
 	
 	@Autowired
 	RestTemplate rest;
-	@PostMapping(value = "/addmarks")
+	@PostMapping(path = "/addmarks")
 	public List<MarkSheet> addMarks(@RequestBody List<MarkSheet> s) {
 		
 		for (MarkSheet ms : s) {
