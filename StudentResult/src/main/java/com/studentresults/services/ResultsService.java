@@ -24,7 +24,7 @@ ResultsDao resdao;
 		
 		return resdao.getAll();
 	}
-	public List<Results> getTop3() {
+	public List<Results> getTopThree() {
 		List<Results> f= resdao.getAll();
 		List<Results> g=f.stream().sorted(Comparator.comparing(Results::getTotal).reversed()).limit(3).toList();
 		return g;

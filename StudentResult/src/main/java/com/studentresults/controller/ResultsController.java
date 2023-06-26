@@ -60,7 +60,7 @@ public class ResultsController {
 	}
 	@GetMapping(value = "/gettop3")
 	public List<Results> getTop3() {
-		return reser.getTop3();
+		return reser.getTopThree();
 	
 	}
 	@GetMapping(value = "/getAll")
