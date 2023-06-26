@@ -1,0 +1,40 @@
+package com.studentresults.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.studentresults.entity.Results;
+import com.studentresults.services.ResultsService;
+
+@RestController
+public class ResultsController {
+
+	@Autowired
+	ResultsService reser;
+	
+	@Autowired
+	RestTemplate rest;
+	
+	@PostMapping(value = "/postresult")
+	public List<Results> postResult(@RequestBody List<Results> r) {
+		
+		for (Results re : r) {
+			if(re.getAtper()>90&&re.getAtper()<101) {
+				int to=re.getTotal()+5;
+				if(to<=500) {
+					re.setTotal(to);
+				}
+			}
+			
+		}
+		
+		return reser.postResult(r);
+		
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.studentmarksheet.repository;
+
+public class MarkRepo {
+
+}

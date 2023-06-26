@@ -1,0 +1,25 @@
+package com.studentmarksheet.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.studentmarksheet.dao.MarkDao;
+import com.studentmarksheet.entity.MarkSheet;
+
+@Service
+public class MarkServices {
+
+	@Autowired
+	MarkDao mardao;
+	public List<MarkSheet> addMarks(List<MarkSheet> s) {
+		
+		return mardao.addMarks(s);
+	}
+//	public List<Integer> getTotal() {
+//		List<MarkSheet> s=s.getAll()
+//		return ;
+//	}
+
+}

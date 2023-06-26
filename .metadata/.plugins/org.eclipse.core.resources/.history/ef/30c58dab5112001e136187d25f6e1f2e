@@ -1,0 +1,27 @@
+package com.studentsdetails.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.studentsdetails.entity.Student;
+import com.studentsdetails.repository.StudentRepo;
+
+@Repository
+public class StudentDao {
+	@Autowired
+	StudentRepo sturepo;
+
+	public String addAllDetails(List<Student> s) {
+		sturepo.saveAll(s) ;
+		return "Successfully saved the details"; 
+	}
+
+	public String addoneDetail(Student s) {
+	
+		sturepo.save(s);
+		return "Saved Successfull"
+	}
+
+}

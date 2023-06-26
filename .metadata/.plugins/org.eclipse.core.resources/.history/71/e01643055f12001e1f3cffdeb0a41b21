@@ -1,0 +1,11 @@
+package com.studentmarksheet.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.studentmarksheet.entity.MarkSheet;
+
+public interface MarkRepo extends JpaRepository<MarkSheet, Integer> {
+@Query("select sem1Practicals+sem1Theory from test_db.mark_sheet")
+public int addsem1Total(int a,int b);
+}

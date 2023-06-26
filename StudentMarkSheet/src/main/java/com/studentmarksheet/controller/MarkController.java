@@ -1,0 +1,49 @@
+package com.studentmarksheet.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.studentmarksheet.entity.MarkSheet;
+import com.studentmarksheet.services.MarkServices;
+
+@RestController
+public class MarkController {
+	@Autowired
+	MarkServices marser;
+	
+	@Autowired
+	RestTemplate rest;
+	@PostMapping(value = "/addmarks")
+	public List<MarkSheet> addMarks(@RequestBody List<MarkSheet> s) {
+		
+		for (MarkSheet ms : s) {
+			 ms.setSem1Total(ms.getSem1Practicals()+ms.getSem1Theory());
+			 ms.setSem2Total(ms.getSem2Practicals()+ms.getSem2Theory());
+			//int ids=ms.getId();
+			//String url1="http//localhost:8080/findrollvidid/";
+			//ResponseEntity<Integer> raw=rest.exchange(url1+ids,HttpMethod.GET,null,Integer.class);
+			//int f =raw.getBody();
+			//ms.setRollNumber(f);
+		}
+		return marser.addMarks(s);
+	}
+	
+	@GetMapping(value = "/getalllist")
+	public List<MarkSheet> getAllList(){
+		return marser.getAllList();
+	}
+	
+	@GetMapping(value = "/gettotal")
+	public List<Integer> getTotal() {
+		return marser.getTotal();
+	}
+	
+	
+
+}

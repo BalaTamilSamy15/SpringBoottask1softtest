@@ -1,0 +1,15 @@
+package com.studentresults.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "results")
+public class Results {
+
+	private int id;
+	private int rollNumber;
+	private String name;
+	private int total;
+	private float percentage;
+}

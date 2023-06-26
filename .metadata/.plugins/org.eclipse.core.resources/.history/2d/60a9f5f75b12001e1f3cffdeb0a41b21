@@ -1,0 +1,5 @@
+package com.studentmarksheet.dao;
+
+public class MarkDao {
+
+}

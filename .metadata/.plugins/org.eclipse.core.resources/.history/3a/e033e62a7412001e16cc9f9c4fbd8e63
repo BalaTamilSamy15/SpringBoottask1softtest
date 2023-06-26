@@ -1,0 +1,5 @@
+package com.studentresults.dao;
+
+public class ResultsDao {
+
+}

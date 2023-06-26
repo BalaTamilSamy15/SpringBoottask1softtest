@@ -1,0 +1,5 @@
+package com.studentresults.services;
+
+public class ResultsService {
+
+}

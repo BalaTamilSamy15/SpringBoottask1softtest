@@ -1,0 +1,9 @@
+package com.studentsdetails.exception;
+
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class StudentException {
+
+ @HandlesTypes(name)
+}

@@ -1,0 +1,20 @@
+package com.studentmarksheet.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "mark_sheet")
+public class MarkSheet {
+	private int id;
+	private int rollNumber;
+	private int sem1Theory;
+	private int sem1Practicals;
+	private int sem1Total=sem1Practicals+sem1Theory;
+	private int sem2Theory;
+	private int sem2Practicals;
+	private int sem2Total=sem2Practicals+sem2Theory;
+	
+	
+
+}

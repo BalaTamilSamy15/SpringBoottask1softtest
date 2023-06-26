@@ -1,0 +1,5 @@
+package com.studentmarksheet.entity;
+
+public class MarkSheet {
+
+}

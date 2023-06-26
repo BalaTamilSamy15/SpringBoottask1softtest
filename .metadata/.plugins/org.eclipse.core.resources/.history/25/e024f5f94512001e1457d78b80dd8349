@@ -1,0 +1,5 @@
+package com.studentsdetails.repository;
+
+public class StudentRepo {
+
+}

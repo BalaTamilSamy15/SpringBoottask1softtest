@@ -1,0 +1,9 @@
+package com.studentresults.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.studentresults.entity.Results;
+
+public interface ResultsRepo extends JpaRepository<Results, Integer> {
+
+}

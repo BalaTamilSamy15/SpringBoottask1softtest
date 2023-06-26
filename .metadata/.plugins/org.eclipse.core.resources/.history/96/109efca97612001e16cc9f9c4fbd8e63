@@ -1,0 +1,27 @@
+package com.studentmarksheet.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.studentmarksheet.entity.MarkSheet;
+import com.studentmarksheet.repository.MarkRepo;
+
+@Repository
+public class MarkDao {
+@Autowired
+MarkRepo markRepo;
+
+	public List<MarkSheet> addMarks(List<MarkSheet> s) {
+		
+		return markRepo.saveAll(s);
+	}
+
+	public List<MarkSheet> getAllList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

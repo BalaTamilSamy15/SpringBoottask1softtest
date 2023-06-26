@@ -1,0 +1,11 @@
+package com.studentsdetails.exception;
+
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import jakarta.servlet.annotation.HandlesTypes;
+
+@RestControllerAdvice
+public class StudentException {
+
+	//@HandlesTypes()
+}

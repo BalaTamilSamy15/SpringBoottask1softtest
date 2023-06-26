@@ -1,0 +1,5 @@
+package com.studentsdetails.exception;
+
+public class AgeException {
+
+}
